@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <!-- فعال‌سازی تولید مستندات XML -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <!-- فعال‌سازی تولید مستندات XML -->
+
+    <!-- حذف هشدار 1591 (نبودن XML Comment روی اعضای public) -->
+    <NoWarn>$(NoWarn);1591</NoWarn>
+
+    <UserSecretsId>47b5993f-f8ac-4075-91f3-3e151398aa18</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="logs\**" />
+    <Content Remove="logs\**" />
+    <EmbeddedResource Remove="logs\**" />
+    <None Remove="logs\**" />
+  </ItemGroup>
+    
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+    <PackageReference Include="Serilog.AspNetCore" />
+    <PackageReference Include="Serilog.Sinks.Console" />
+    <PackageReference Include="Serilog.Sinks.File" />
+    <PackageReference Include="Swashbuckle.AspNetCore" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+    <PackageReference Include="Hangfire.SqlServer" />
+    <PackageReference Include="Hangfire.AspNetCore" />
+    <PackageReference Include="NetEscapades.AspNetCore.SecurityHeaders" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TodoApp.Business\TodoApp.Business.csproj" />
+    <ProjectReference Include="..\TodoApp.Data\TodoApp.Data.csproj" />
+  </ItemGroup>
+
+</Project>
