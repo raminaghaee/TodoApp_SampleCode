@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/TodoApp.API/TodoApp.API.csproj" />
+    <Project Path="src/TodoApp.Business/TodoApp.Business.csproj" />
+    <Project Path="src/TodoApp.Data/TodoApp.Data.csproj" />
+  </Folder>
+</Solution>

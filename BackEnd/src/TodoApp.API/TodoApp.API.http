@@ -1,0 +1,6 @@
+@TodoApp.API_HostAddress = http://localhost:7123
+
+GET {{TodoApp.API_HostAddress}}/TaskItem/
+Accept: application/json
+
+###
